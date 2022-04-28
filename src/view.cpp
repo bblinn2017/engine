@@ -47,7 +47,7 @@ View::View(QWidget *parent) : QGLWidget(ViewFormat(), parent),
     m_frameIndex = 0;
 
     /** SUPPORT CODE END **/
-    m_app = static_pointer_cast<Application>(make_shared<MyApp>());
+    m_app = static_pointer_cast<Application>(make_shared<ReApp>());
 }
 
 View::~View()
