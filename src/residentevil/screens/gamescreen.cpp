@@ -25,7 +25,8 @@ GameScreen::GameScreen(shared_ptr<Input> input) :
     drawSystem->addGameObject("player",player);
     collisionSystem->addGameObject("player",player);
     // Mansion
-    for (int i = 0; i < 1; i++) {
+    for (int i = 0; i < 10; i++) {
+        cout << i << endl;
         shared_ptr<Part> part = make_shared<Part>(i);
         std::string key = "part" + std::to_string(i);
         m_gameWorld->addGameObject(key,part);
@@ -44,5 +45,5 @@ void GameScreen::draw(Graphics *graphics) {
 
 void GameScreen::tick(float seconds) {
     m_gameWorld->getSystem<TickSystem>()->tick(seconds);
-    m_gameWorld->getSystem<BVHCollisionSystem>()->checkCollisions();
+//    m_gameWorld->getSystem<BVHCollisionSystem>()->checkCollisions();
 }

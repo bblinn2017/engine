@@ -17,7 +17,7 @@ void MovementComponent::tick(float seconds) {
     vec3 *vel = m_transform->getVel();
 
     if (!onFrictionSurface) {
-        vel->y += GRAVITY * seconds;
+//        vel->y += GRAVITY * seconds;
     } else if (isMoving) {
         vel->y = 0.;
     } else{
